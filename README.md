@@ -82,7 +82,7 @@ python adesha.py --trace run examples/function.adesha  # watch it execute
 python -m pytest tests -q              # the test suite
 ```
 
-The browser playground (Pyodide, zero install) lives in [playground/](playground/) — serve it with `python -m http.server` from that folder.
+The browser playground (Pyodide, zero install) lives in [playground/](playground/) — serve it with `python -m http.server` from that folder, or open it directly at **https://ayushbhoi08-lab.github.io/adesha/**.
 
 New to programming? Start with [Lesson Zero](docs/lessons/lesson0.md) — five steps that teach one programming concept and one real Sanskrit grammar note at a time.
 
