@@ -1,0 +1,6 @@
+# ganana.adesha — counter: sthApaya + punaH
+# 108 iterations of n = n + 1
+sthApaya n 0
+punaH 108 sthApaya n n + 1
+vada gaNanA
+gaNaya n

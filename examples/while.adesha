@@ -1,0 +1,9 @@
+# while.adesha — yAvat loop
+sthApaya n 1
+
+yAvat n <= 5
+    vada n
+    sthApaya n n + 1
+iti
+
+vada saMpUrNam

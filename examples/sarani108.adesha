@@ -1,0 +1,14 @@
+# sarani108.adesha — 108-multiplication table: punaH + gaNaya
+# Step 1: count to 108 via punaH
+sthApaya tAla 0
+punaH 108 sthApaya tAla tAla + 1
+# Step 2: gaNaya shows multiples 1x through 9x
+gaNaya tAla * 1
+gaNaya tAla * 2
+gaNaya tAla * 3
+gaNaya tAla * 4
+gaNaya tAla * 5
+gaNaya tAla * 6
+gaNaya tAla * 7
+gaNaya tAla * 8
+gaNaya tAla * 9

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ādeśa Playground</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <div id="loading-text">Loading Pyodide + Ādeśa interpreter…</div>
+    <div class="tagline" id="loading-sub">First load may take ~30 seconds.</div>
+    <pre id="loading-details"></pre>
+  </div>
+
+  <header>
+    <div>
+      <h1><span>Ādeśa</span> Playground</h1>
+      <div class="tagline">Sanskrit command language in your browser</div>
+    </div>
+    <div class="actions">
+      <button id="btn-run" class="primary" disabled>▶ Run</button>
+      <button id="btn-toggle" disabled>Devanagari</button>
+      <button id="btn-share" disabled>Share</button>
+      <button id="btn-clear" disabled>Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <aside class="lessons">
+      <h2>Lesson Zero</h2>
+      <ul id="lesson-list"></ul>
+    </aside>
+
+    <section class="editor-wrap">
+      <div class="editor-toolbar">
+        <span class="tagline">Edit on the left, output on the right</span>
+        <span class="spacer"></span>
+        <span class="tagline" id="script-name">untitled</span>
+      </div>
+      <textarea id="editor" spellcheck="false" placeholder="# Type your Ādeśa script here&#10;vada namaste"></textarea>
+    </section>
+
+    <section class="output-panel">
+      <h2>Output</h2>
+      <div id="output"></div>
+      <div class="status-bar">
+        <span id="status-dot">●</span>
+        <span id="status-text">loading…</span>
+        <span class="spacer"></span>
+        <span id="line-col">Ln 1, Col 1</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

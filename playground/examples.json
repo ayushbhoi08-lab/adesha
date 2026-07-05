@@ -1,0 +1,25 @@
+{
+  "title": "Lesson Zero — First Words",
+  "snippets": [
+    {
+      "name": "1. vada — speak",
+      "source": "vada namaste"
+    },
+    {
+      "name": "2. sthApaya — remember",
+      "source": "sthApaya nama rAma\nvada namaste nama"
+    },
+    {
+      "name": "3. punaH — repeat",
+      "source": "punaH tri\n    vada jaya\niti"
+    },
+    {
+      "name": "4. yadi — choose",
+      "source": "sthApaya x eka\nyadi x == 1\n    vada sAdhu\niti"
+    },
+    {
+      "name": "5. mudrA — seal",
+      "source": "# mama prathamaH AdezaH\nsthApaya nama rAma\nvada namaste nama\nmudrA nama"
+    }
+  ]
+}

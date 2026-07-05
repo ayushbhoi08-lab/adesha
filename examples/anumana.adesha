@@ -1,0 +1,6 @@
+# anumana.adesha — guessing game: zRNu + yadi
+# zRNu stores as string; compare with literal "108"
+vada kimapi saMkhyAM cintaya
+zRNu uttara
+yadi uttara == "108" : vada sAdhu
+yadi uttara != "108" : vada doSaH punaH yatnaM kuru

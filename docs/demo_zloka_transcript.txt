@@ -1,0 +1,44 @@
+Ādeśa — "Notarize a Verse" Demo  (two-layer, honest labels)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Verse   : Bhagavad Gītā 2.47 (Harvard-Kyoto romanization)
+Script  : examples/zloka_mudra.adesha
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Layer 1 — mudrā  (software integrity, 108-bit)
+$ python adesha.py run examples/zloka_mudra.adesha
+
+karmaNy evAdhikAras te mA phaleSu kadAcana | mA karma-phala-hetur bhUr mA te saMgo 'stv akarmaNi
+mudrA zloka: 1be04017e74cbcf0137ab188428
+             ^ this is the mudrā — software integrity fingerprint, 108-bit
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Layer 2 — lane residue  (chip-true, §2-locked, mod Q=12289)
+$ python -c "import aos_asm; v='karmaNy evAdhikAras te mA phaleSu kadAcana | mA karma-phala-hetur bhUr mA te saMgo \'stv akarmaNi'; print(f'lane residue (chip lane, mod 12289): {aos_asm.lane_residue(v):04x}')"
+
+lane residue (chip lane, mod 12289): 2c82
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+What each number means:
+
+  mudrā 1be04017e74cbcf0137ab188428
+    Horner hash over base-108 digit decomposition of the UTF-8 integer
+    representation of the verse, mod M107 = 2^107 − 1 (Mersenne prime).
+    108-bit collision resistance. Used by seal/parIkSA. Env-independent.
+
+  lane residue 2c82  (= 11394 decimal)
+    §2-locked chip FOLD: extracts laghu (a-z → 0) / guru (A-Z → 1) bits,
+    packs into 28-bit feet MSB-first, runs Horner mod Q = 12289 (NTT prime).
+    14-bit output; reflects Harvard-Kyoto prosodic structure, not collision
+    resistance. Parity with the RTL core: C2 VERIFIED 2026-07-04 —
+    builtin == golden == core_top RTL (iverilog) on 1000/1000 randomized
+    inputs, zero mismatches (tests/reports/c2_parity_report.md).
+
+NOT an integrity claim on lane residue — see Track C plan §C1 finding.
+Real chip-true integrity arrives with C3 sAkSya (A-TS 8-chain, ≈108-bit).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated : 2026-07-04
