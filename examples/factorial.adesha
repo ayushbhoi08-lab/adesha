@@ -1,0 +1,10 @@
+# factorial.adesha — simple recursive factorial
+vidhi ghata n
+    yadi n <= eka
+        dehi 1
+    iti
+    dehi n * ghata(n - 1)
+iti
+
+vada paJcasya ghAtaH
+gaNaya ghata(paJca)
