@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adesha"
+version = "0.1.0"
+description = "A Sanskrit programming language — from Pāṇini to silicon."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ayush Bhoi" },
+]
+keywords = [
+    "sanskrit",
+    "programming-language",
+    "interpreter",
+    "education",
+    "panini",
+    "devanagari",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Software Development :: Interpreters",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ayushbhoi08-lab/adesha"
+Repository = "https://github.com/ayushbhoi08-lab/adesha"
+Documentation = "https://ayushbhoi08-lab.github.io/adesha/"
+
+[project.scripts]
+adesha = "adesha.interp:main"
+
+[tool.setuptools]
+packages = ["adesha"]
+py-modules = ["aos_asm"]
